@@ -1,0 +1,149 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aplic. Web de jQuery Mobile</title>
+
+<!-- ****** EN ESTA PARTE SE REFEREN LOS ARCHIVOS CSS QUE SE USARAN EN EL PROYECTO ***** -->
+<link rel="stylesheet" href="css/MiTema.css" type="text/css" />
+<link rel="stylesheet" href="css/MiTema.min.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" type="text/css" />
+<link href="css/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+<!-- ****************************************** FIN DEL BLOQUE DE DECLARACIONES CSS ************************** -->
+
+<!-- ****** EN ESTA PARTE SE REFERENCIAN LOS ARCHIVOS JQUERY QUE SE USARAN EN EL PROYECTO ***** -->
+<script src="jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="jquery/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+
+
+<!-- ****** SCRIPTS ***** -->
+   <script>
+        function myfunction(){
+            document.getElementById("texto").style.fontSize = "25px";
+            document.getElementById("texto").style.color = "red";
+            document.getElementById("texto").style.backgroundColor = "yellow";
+        }
+
+
+        $(document).on("pagecreate","#page2",function(){
+            $("p").on("tap",function(){
+                $(this).hide();
+            });
+        });
+
+
+    </script>
+
+
+
+<!-- ******************** -->
+</head> 
+<body> 
+
+<!-- ****** PAGINA PRINCIPAL DEL PROYECTO ***** -->
+<div data-role="page" id="page">
+    <div data-role="content">
+
+        <div data-role="header">
+            <h1>Clase 4</h1>
+        </div>  
+
+ <!-- ************* EN ESTA PARTE SE UNA NAVBAR QUE FUNCIONARA COMO MENU EN LA PAGINA PRINCIPAL *********** -->
+        <div data-role="content">
+
+<!-- ************* CON ESTE CODIGO COLOCAMOS 1 IMAGEN SENCILLA EN LA PAGINA CON EL ESTILO BLOCK PARA AJUSTARLO A LA PAGINA*********** -->         
+            <center>
+                <div id="main-content" role="main" class="ui-content">
+                    <div class="ui-grid-solo">
+                        <div id="photos-container" class="ui-block-a">
+                            <img style="display: block;" id="smallImage" src="images/Encuesta.jpg" />                       
+                    </div>
+                    </div>
+                </div> 
+            </center>   
+<!-- ***************************************************************************************************** -->
+
+            <ul data-role="listview" data-inset="true" data-theme="b">                     
+                <li><a href="#page1">Pagina 1</a></li>
+                <li><a href="#page2">Pagina 2</a></li>
+                <li><a href="#page3">Pagina 3</a></li>        
+            </ul>
+     
+        </div>
+<!-- ***************************************************************************************************** -->
+
+<!-- ************* CON ESTE CODIGO SE DECLARA EL PIE DE PAGINA Y MEDIANTE LA FUNCION "DATA-POSICION" LO COLOCAMOS EN FINAL DE LA PAGINA **** -->
+        <div data-role="footer" data-position="fixed">
+	      <h4>©Roberto Elvira Enriquez</h4>
+        </div>
+
+    </div>
+</div>
+<!-- ***************************************************************************************************** -->
+
+<!-- ******************************** FIN DEL BLOQUE DE LA PANTALLA PRINCIPAL ***************** -->    
+
+<!-- ****** PRIMERA PAGINA DEL PRYECTO ***** -->
+<div data-role="page" id="page1" data-theme="b">
+<!-- ************************ TITULO CON ICONO QUE REDIRECCIONA A LA PAGINA PRINCIPAL ********************************** -->
+    <div data-role="header">
+        <h1>Datos Personales</h1>       
+        <a href="#page" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext" data-transition="flow">Home</a>      
+    </div>
+<!-- ****************************************************************************************** -->
+    
+    <div data-role="content">
+
+        <h2>Practica de Scripts</h2>
+
+        <p id="texto">JavaScript puede cambiar el estilo del HTML</p>
+        <br><br>
+        <p id="demo">Hola Mundo</p>
+        
+        <button type="button" onclick="myfunction()"> Script 1 </button>
+        <button type="button" onclick="myfunction2()"> Script 2 </button>
+
+    </div>
+ 
+<!-- ****************************************************************************************** -->
+    <div data-role="footer" data-position="fixed">
+        <h4>©Roberto Elvira Enriquez</h4>
+    </div>
+</div>
+<!-- ************************ FIN DEL BLOQUE DE LA PRIMERA PAGINA ********************************** -->
+
+
+<!-- ****** SEGUNDA PAGINA DEL PRYECTO ***** -->
+<div data-role="page" id="page2" data-theme="b">
+<!-- ************************ TITULO CON ICONO QUE REDIRECCIONA A LA PAGINA PRINCIPAL ********************************** -->
+    <div data-role="header">
+        <h1>Datos Personales</h1>       
+        <a href="#page" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext" data-transition="flow">Home</a>      
+    </div>
+<!-- ****************************************************************************************** -->
+    
+    <div data-role="content" data-role="main">
+
+        <h2>Practica de Scripts</h2>
+
+        <p id="texto">If you tap me, I will disappear </p>       
+        <p id="demo">Tap me away!</p>
+        <p id="demo">Tap me too</p>
+        
+
+    </div>
+ 
+<!-- ****************************************************************************************** -->
+    <div data-role="footer" data-position="fixed">
+        <h4>©Roberto Elvira Enriquez</h4>
+    </div>
+</div>
+<!-- ************************ FIN DEL BLOQUE DE LA SEGUNDA PAGINA ********************************** -->
+
+
+
+
+
+
+</body>
+</html>
