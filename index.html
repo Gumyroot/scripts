@@ -17,12 +17,17 @@
 
 
 <!-- ****** SCRIPTS ***** -->
-   <script>
+    <script>
         function myfunction(){
             document.getElementById("texto").style.fontSize = "25px";
             document.getElementById("texto").style.color = "red";
             document.getElementById("texto").style.backgroundColor = "yellow";
         }
+
+        function myfunction2(){
+            document.getElementById("demo").innerHTML = "Hello World!";
+        }
+
 
 
         $(document).on("pagecreate","#page2",function(){
@@ -32,8 +37,10 @@
         });
 
 
-    </script>
 
+
+
+    </script>
 
 
 <!-- ******************** -->
