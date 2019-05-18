@@ -28,6 +28,8 @@
             document.getElementById("demo").innerHTML = "Hello World!";
         }
 
+        function actualizar(){location.reload(true);}
+
 
 
         $(document).on("pagecreate","#page2",function(){
@@ -109,6 +111,8 @@
         
         <button type="button" onclick="myfunction()"> Script 1 </button>
         <button type="button" onclick="myfunction2()"> Script 2 </button>
+        <br><br><br>
+        <button type="button" onclick="actualizar()"> Actualizar </button>
 
     </div>
  
@@ -137,6 +141,9 @@
         <p id="demo">Tap me away!</p>
         <p id="demo">Tap me too</p>
         
+
+        <br><br><br>
+        <button type="button" onclick="actualizar()"> Actualizar </button>
 
     </div>
  
